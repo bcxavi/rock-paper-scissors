@@ -5,9 +5,9 @@
 function getComputerChoice() {
     let num = Math.floor(Math.random() * 3)
 
-    if (num === 0) return 'Rock'
-    if (num === 1) return 'Paper'
-    return 'Scissors'
+    if (num === 0) return 'rock'
+    if (num === 1) return 'paper'
+    return 'scissors'
 }
 
 function getHumanChoice() {
@@ -15,4 +15,5 @@ function getHumanChoice() {
     return choice.toLowerCase()
 }
 
-
+let humanScore = 0;
+let computerScore = 0;
