@@ -17,3 +17,35 @@ function getHumanChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+
+
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        return "It's a tie!"
+    }
+    if (humanChoice==='rock' && computerChoice === 'scissors') {
+        humanScore++
+        return 'You win! Rock beats Scissors'
+    }
+    if (humanChoice==='paper' && computerChoice === 'rock') {
+        humanScore++
+        return 'You win! Paper beats Rock'
+    }
+    if (humanChoice==='scissors' && computerChoice === 'paper') {
+        humanScore++
+        return 'You win! Scissors beats Paper'
+    }
+    if (computerChoice==='rock' && humanChoice === 'scissors') {
+        computerScore++
+        return 'You lose! Rock beats Scissors'
+    }
+    if (computerChoice==='paper' && humanChoice === 'rock') {
+        computerScore++
+        return 'You lose! Paper beats Rock'
+    }
+    else {
+        computerScore++
+        return 'You lose! Scissors beats Paper'
+    }
+}
