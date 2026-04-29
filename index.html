@@ -7,21 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="container">
+    <main class="container">
     <h1>Rock Paper Scissors</h1>
 
+    <div class="score-board">
+        <div class="score-box">
+        <p class="label">Human</p>
+        <p class="human-score">0</p>
+        </div>
 
-    <div class="score-card">
-        <div class="human-score">Human Score:</div>
-        <div class="computer-score"> Computer Score:</div>
+        <div class="score-box">
+        <p class="label">Computer</p>
+        <p class="computer-score">0</p>
+        </div>
     </div>
-    <p>Choose your weapon!</p>
+
+    <p class="instruction">Choose your weapon!</p>
+
     <div class="buttons">
-      <button class="choice-btn">Rock</button>
-      <button class="choice-btn">Paper</button>
-      <button class="choice-btn">Scissors</button>
+        <button class="choice-btn">Rock</button>
+        <button class="choice-btn">Paper</button>
+        <button class="choice-btn">Scissors</button>
     </div>
-  </main>
+
+    <p class="result-message"></p>
+    </main>
 
   <script src="script.js"></script>
 </body>
