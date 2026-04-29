@@ -23,3 +23,18 @@ body {
   font-size: 18px;
   cursor: pointer;
 }
+.score-board {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.score-box {
+  text-align: center;
+}
+
+.human-score,
+.computer-score {
+  font-size: 48px;
+  font-weight: bold;
+}

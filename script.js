@@ -14,48 +14,6 @@ function getComputerChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
-// function playGame() {
-
-
-//     function playRound(humanChoice, computerChoice) {
-//         if (humanChoice === computerChoice) {
-//             return "It's a tie!"
-//         }
-
-//         if (humanChoice === 'rock' && computerChoice === 'scissors') {
-//             humanScore++
-//             return 'You win! Rock beats Scissors'
-//         }
-
-//         if (humanChoice === 'paper' && computerChoice === 'rock') {
-//             humanScore++
-//             return 'You win! Paper beats Rock'
-//         }
-
-//         if (humanChoice === 'scissors' && computerChoice === 'paper') {
-//             humanScore++
-//             return 'You win! Scissors beats Paper'
-//         }
-
-//         computerScore++
-//         return `You lose! ${computerChoice} beats ${humanChoice}`
-//     }
-
-//     let humanSelection 
-//     (playRound(humanSelection, computerSelection))
-  
-
-//     if (humanScore > computerScore) {
-//         return 'Congratulations! You win!'
-//     }
-
-//     if (humanScore === computerScore) {
-//         return "It's a Tie"
-//     }
-
-//     return "You lose!"
-// }
-
  function playRound(humanChoice, computerChoice) {
         if (humanChoice === computerChoice) {
             return "It's a tie!"
@@ -83,14 +41,27 @@ let computerScore = 0;
 // console.log(playGame())
 
 const buttons = document.querySelectorAll(".choice-btn");
+const humanScoreDisplay = document.querySelector(".human-score");
+const computerScoreDisplay = document.querySelector(".computer-score");
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         const humanChoice = button.textContent.toLowerCase();
         const computerChoice = getComputerChoice();
-
-        console.log("Human choice:", humanChoice);
-        console.log("Computer choice:", computerChoice);
+        const resultMessage = document.querySelector(".result-message");
+        
         console.log(playRound(humanChoice, computerChoice));
+
+        humanScoreDisplay.textContent = humanScore;
+        computerScoreDisplay.textContent = computerScore;
+
+        if (humanScore === 5) {
+            resultMessage.textContent = "You win the game!";
+        }
+
+        if (computerScore === 5) {
+            resultMessage.textContent = "Computer wins the game!";
+        }
     });
 });
+
